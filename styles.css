@@ -1,0 +1,90 @@
+submit, button {
+    font-family: 'montserrat', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+
+}
+
+
+.box {
+    width: 200px;
+    height: 300px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    float:inline-start;
+    background-color: #6054c4;
+    color:#fff
+
+}
+
+.bookList {
+    border: 3px solid #fff;
+    padding: 20px;
+}
+
+.removeButtonBox {
+    width: 100px;
+    margin: 10px;
+    display: flex;
+    margin-top: auto;
+}
+
+.removeButton {
+    height: 20px;
+    margin: 10px;
+    float:inline-start;
+}
+
+.newBookButton {
+    margin-top: 20px;
+    display:block
+}
+
+.closeFormButton {
+    float: left
+}
+
+.formContainer {
+    display: inline;
+    border: 1px solid white;
+}
+
+.newBookButton {
+    float: right
+}
+
+
+label {
+    font-family: 'montserrat', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+    background-color: #6054c4;
+    margin-bottom: 100px;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: white;
+
+}
+body {
+    margin-top: 200px;
+    background-color:rgb(255, 255, 255)
+}
+
+p {
+    font-family:'montserrat', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+    font-family:'montserrat', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    font-family:'montserrat', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+
+}
+
