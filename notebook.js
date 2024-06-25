@@ -40,9 +40,9 @@
 
 const theHobbit = new Book('The Hobbit', 'J.R.R. Tolkien', 295, true)
 
-const Narnia = new Book('The Lion, the Witch, and the Wardrobe', 'C.S. Lewis', 208, false)
+const Narnia = new Book('The Lion, the Witch, and the Wardrobe', 'C.S. Lewis', 208, true)
 
-const diaryOfAWimpyKid = new Book("Diary of a Wimpy Kid", "Jeff Kinney", 224, false)
+const diaryOfAWimpyKid = new Book("Diary of a Wimpy Kid", "Jeff Kinney", 224, true)
 
 // console.log(theHobbit.info());
 
@@ -168,13 +168,14 @@ function createNewBook(){
 
 function toggleHaveRead(book){
     const index = myLibrary.indexOf(book)
-    const haveReadButton = document.getElementById('haveReadButton')
-    console.log(myLibrary[index][3])
-    if (myLibrary[index][3] == true){
-        myLibrary[index][3] = false
+    const haveRead = myLibrary[index].haveRead
+    console.log()
+    if (haveRead == true){
+        myLibrary[index].haveRead = false;
     }
-    else{
-        myLibrary[index][3] = true;
+    else {
+        myLibrary[index].haveRead = true;
+        console.log(myLibrary[index])
     }
     removeAllBooks()
     displayAllBooks()
@@ -233,12 +234,13 @@ function displayAllBooks(){
                 haveReadButton.classList.add('removeButton')
                 
                 const index = myLibrary.indexOf(book)
-                if (myLibrary[index][3] == true){
+                console.log(myLibrary[index][3])
+                if (myLibrary[index].haveRead === true){
                     haveReadButton.textContent = "I've Read"
                 }
-                else (
+                else if (myLibrary[index].haveRead === false){
                     haveReadButton.textContent = "Not Read"
-                )
+                }
 
                 haveReadButton.onclick = function(){
                     toggleHaveRead(book);
@@ -290,11 +292,11 @@ function displayNewBook(book){
                 
 
                 const index = myLibrary.indexOf(book)
-                if (myLibrary[index][3] == true){
-                    haveReadButton.textContent = 'Read'
+                if (myLibrary[index].haveRead == true){
+                    haveReadButton.textContent = "I've Read"
                 }
                 else (
-                    haveReadButton.textContent = 'Not Read'
+                    haveReadButton.textContent = "Not Read"
                 )
 
                 haveReadButton.onclick = function(){
