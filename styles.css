@@ -1,20 +1,28 @@
-submit, button {
-    font-family: 'montserrat', Tahoma, Geneva, Verdana, sans-serif;
+.submitButton {
+    margin: 10px;
+    padding: 5px;
+    background-color:#54c45a;
     border: none;
-
+    color: rgb(255, 255, 255);
+    font-weight: bold;
 }
 
+.closeFormButton {
+    background-color:rgb(255, 117, 117);
+    border: none;
+    color:white;
+    font-weight: bold;
+}
 
 .box {
     width: 200px;
     height: 300px;
-    border: 1px solid black;
-    padding: 10px;
+    padding: 20px;
     margin: 10px;
     float:inline-start;
     background-color: #6054c4;
-    color:#fff
-
+    color:#fff;
+    border-radius: 2%;
 }
 
 .bookList {
@@ -27,21 +35,45 @@ submit, button {
     margin: 10px;
     display: flex;
     margin-top: auto;
+    font-family: 'montserrat', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
 }
 
+
 .removeButton {
-    height: 20px;
     margin: 10px;
     float:inline-start;
+    font-family: 'montserrat', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    background-color: rgb(255, 117, 117);
+    color: #fff;
+    padding: 5px;
+}
+
+.haveReadButton {
+    margin: 10px;
+    float:inline-start;
+    font-family: 'montserrat', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    color:#fff;
+    padding: 5px;
 }
 
 .newBookButton {
     margin-top: 20px;
-    display:block
+    display:block;
+    background-color: #54c45a;
+    color: whitesmoke;
+    padding: 15px;
+    font-family: 'montserrat', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    font-weight: bold;
 }
 
 .closeFormButton {
-    float: left
+    float: left;
+    font-family: 'montserrat', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
 }
 
 .formContainer {
@@ -49,9 +81,6 @@ submit, button {
     border: 1px solid white;
 }
 
-.newBookButton {
-    float: right
-}
 
 
 label {

@@ -128,10 +128,12 @@ function createNewBook(){
     submitNewBook.type = 'submit'
     submitNewBook.id = 'submitNewBook'
     submitNewBook.name = 'submitNewBook'
-    submitNewBook.textContent = 'submit'
+    submitNewBook.textContent = 'Add'
+    submitNewBook.classList.add("submitButton")
 
     const closeFormButton = document.createElement('button')
     closeFormButton.id = 'closeFormButton'
+    closeFormButton.classList.add("closeFormButton")
     closeFormButton.name = 'closeFormButton'
     closeFormButton.textContent = "x"
 
@@ -176,6 +178,7 @@ function toggleHaveRead(book){
     else {
         myLibrary[index].haveRead = true;
         console.log(myLibrary[index])
+
     }
     removeAllBooks()
     displayAllBooks()
@@ -231,19 +234,21 @@ function displayAllBooks(){
 
                 const haveReadButton = document.createElement('button');
                 haveReadButton.id = "haveReadButton"
-                haveReadButton.classList.add('removeButton')
+                haveReadButton.classList.add('haveReadButton')
                 
                 const index = myLibrary.indexOf(book)
-                console.log(myLibrary[index][3])
-                if (myLibrary[index].haveRead === true){
+                if (myLibrary[index].haveRead == true){
                     haveReadButton.textContent = "I've Read"
+                    haveReadButton.style.backgroundColor = '#54c45a';
                 }
-                else if (myLibrary[index].haveRead === false){
+                else {
                     haveReadButton.textContent = "Not Read"
+                    haveReadButton.style.backgroundColor = 'rgb(255, 117, 117)';
                 }
-
+                
                 haveReadButton.onclick = function(){
                     toggleHaveRead(book);
+                    changeColor(book);
                 };
 
                 const div = document.createElement('div');
@@ -288,16 +293,18 @@ function displayNewBook(book){
 
                 const haveReadButton = document.createElement('button');
                 haveReadButton.id = "haveReadButton"
-                haveReadButton.classList.add('removeButton')
+                haveReadButton.classList.add('haveReadButton')
                 
 
                 const index = myLibrary.indexOf(book)
                 if (myLibrary[index].haveRead == true){
                     haveReadButton.textContent = "I've Read"
+                    haveReadButton.classList.add('haveReadButton')
                 }
-                else (
+                else {
                     haveReadButton.textContent = "Not Read"
-                )
+                    haveReadButton.classList.add('removeButton')
+                }
 
                 haveReadButton.onclick = function(){
                     toggleHaveRead(book);
